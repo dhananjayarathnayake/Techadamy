@@ -1,9 +1,8 @@
 {
 	"info": {
-		"_postman_id": "4331ebb6-f74e-4057-83ec-0856fa7a92b5",
+		"_postman_id": "8c30aca0-2a39-4f3a-8133-328e4ae2ab94",
 		"name": "API_Automation_test1",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "5570492"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
