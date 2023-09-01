@@ -42,8 +42,9 @@ public class ImplementListener extends TestBase implements ITestListener{
 		String CurrentDate = format.format(date);
 		String newpath = System.getProperty("user.dir")+"/reports/screnshots/"+CurrentDate+".jpeg";
 		File desFile = new File(newpath);
-		
+		//test.log(Status.FAIL, test.addScreenCaptureFromPath(newpath));
 		test.addScreenCaptureFromPath(newpath, "Testcase failure screenshot");
+		
 		try {
 			FileUtils.copyFile(SrcFile, desFile);
 		} catch (IOException e) {

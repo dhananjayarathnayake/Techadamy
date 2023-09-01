@@ -40,6 +40,7 @@ public class LoginTest_Negative extends TestBase{
 	@Test (priority = 2)
 	public void Login(String username, String password)
 	{
+		test.log(Status.INFO,"User Enter "+ username + " and " +password);
 		homePage = loginPage.Login(username, password);
 	}
 	

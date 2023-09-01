@@ -2,6 +2,7 @@ package com.saucedemo.testcases;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -25,9 +26,15 @@ public class LoginTest_Positive extends TestBase{
 		loginpage = new LoginPage();
 	}
 	
+	
+	 @BeforeTest public void setUptest() {
+		// test = extent.createTest("new");
+	 }
+	
 	@Test(priority=1)
 	public void validateLandingPageTitle()
 	{
+		//test = extent.createTest("validateLandingPageTitle");
 		String title = loginpage.validateLandingPageTitle();
 		org.testng.Assert.assertEquals(title, prop.get("LandingPageTitle"));
 		test.log(Status.PASS, "User Landing to the correct page | LoginPage Title: "+title);
@@ -37,6 +44,7 @@ public class LoginTest_Positive extends TestBase{
 	@Test(priority=2)
 	public  void Login(String username, String password)
 	{
+		test.log(Status.INFO,"User Enter "+ username + " and " +password);
 		homepage = loginpage.Login(username, password);
 		
 	}
@@ -60,5 +68,6 @@ public class LoginTest_Positive extends TestBase{
 	@AfterSuite
 	public void closeApplication() {
 		driver.quit();
+		//extent.flush();
 	}
 }

@@ -6,7 +6,7 @@
 		<listener
 			class-name="com.saucedemo.reportListener.ImplementListener" />
 	</listeners>
-	<test name="Test SauseDemo Positive Scenario">
+	 <test name="Test SauseDemo Positive Scenario">
 
 		<parameter name="ValidUsername" value="standard_user" />
 		<parameter name="ValidPassword" value="secret_sauce" />
@@ -15,8 +15,8 @@
 			<class name="com.saucedemo.testcases.LoginTest_Positive">
 			</class>
 		</classes>
-	</test>
-	<test name="Test SauseDemo Negative Scenario">
+	</test> 
+	 <test name="Test SauseDemo Negative Scenario">
 		<parameter name="InvalidUsername"
 			value="standard_InvalidIuser" />
 		<parameter name="InvalidPassword" value="secret_Invalidpwd" />
@@ -24,5 +24,5 @@
 			<class name="com.saucedemo.testcases.LoginTest_Negative">
 			</class>
 		</classes>
-	</test>
+	</test> 
 </suite>
